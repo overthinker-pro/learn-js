@@ -211,5 +211,3 @@ reslt();
 
 
 console.log('Something is cooking');
-
-
