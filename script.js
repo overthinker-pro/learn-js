@@ -208,3 +208,6 @@ function hello() {
 let reslt = hello();
 
 reslt();
+
+
+console.log('Something is cooking');
