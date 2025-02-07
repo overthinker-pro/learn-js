@@ -324,7 +324,7 @@ function squareArea(side){
     return side * side;
 }
 
-console.log('The area of the square is ' + squareArea(10));
+console.log('The area of the square is ' + squareArea(10) + 'sqcm');
 
 
 // finding the area of a rectangle
@@ -334,3 +334,55 @@ function rectangleArea(l, w){
 }
 
 console.log("The area of the rectangle is " + rectangleArea(15, 8));
+
+
+// area of a circle
+
+const pi = 3.14159265359;
+
+function circleArea(r){
+    return pi * r * r;
+}
+
+console.log("The area of the circle is " + circleArea(4));
+
+
+// area of triangle
+
+function triangleArea(b, h){
+    return 1/2 * b * h;
+}
+
+console.log("The area of the triangle is " + triangleArea(10, 5))
+
+
+// calling above area functions using if else-if & switch
+
+function area(shape, a, b){
+    if (shape === "square"){
+        return squareArea(a);
+    }else if (shape === "rectangle"){
+        return rectangleArea(a, b);
+    }else if (shape === "circle"){
+        return circleArea(a);
+    }else if(shape === "triangle"){
+        return triangleArea(a, b);
+    }else {
+        return "Shape not found";
+    }
+}
+
+console.log(area("square", 10));
+console.log(area("rectangle", 8, 10));
+console.log(area("circle", 6));
+console.log(area("triangle", 14, 6.7));
+
+
+// function to find the length of a string
+
+function stringLength(str) {
+    return str.length;
+}
+
+const string1 = "Hello World";
+console.log(stringLength(string1));
