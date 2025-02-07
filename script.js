@@ -343,9 +343,9 @@ console.log("The area of the rectangle is " + rectangleArea(15, 8));
 
 // area of a circle
 
-const pi = 3.14159265359;
 
 function circleArea(r){
+    const pi = 3.14159265359;
     return pi * r * r;
 }
 
@@ -355,7 +355,7 @@ console.log("The area of the circle is " + circleArea(4));
 // area of triangle
 
 function triangleArea(b, h){
-    return 1/2 * b * h;
+    return 1/2 * (b * h);
 }
 
 console.log("The area of the triangle is " + triangleArea(10, 5))
@@ -391,3 +391,26 @@ function stringLength(str) {
 
 const string1 = "Hello World";
 console.log(stringLength(string1));
+
+
+
+
+// ------- Class concept ------
+
+class Person {
+    name;
+    age;
+
+    constructor(n, a){
+        this.name = n;
+        this.age = a;
+    }
+
+    introduce(){
+        return(`Hello, my name is ${this.name} and I am ${this.age} years old`);
+    }
+    
+}
+
+let person1 = new Person('Alice', 30);
+console.log(person1.introduce());
