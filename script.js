@@ -229,3 +229,108 @@ console.log(even(3));
 console.log(even(8));
 
 
+// function to find the sum of the numbers in an array using for loop
+
+const arr = [10, 11, 12, 13, 14];
+
+function ForLoop(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+
+    return sum;
+}
+
+console.log(ForLoop(arr));
+
+
+// sum of the numbers in an array with while loop
+
+const sumWhile = [30, 5, 15, 50];
+
+function WhileLoop(sumWhile){
+    let sum = 0;
+    let i = 0;
+    while (i < sumWhile.length){
+        sum += sumWhile[i];
+        i++;
+    }
+
+    return sum;
+}
+
+console.log(WhileLoop(sumWhile));
+
+
+// sum of array numbers with do-while loop
+
+const dw = [40, 30, 80, 50];
+
+function DoWhile(dw){
+    let sum = 0;
+    let i = 0;
+    if (dw.length === 0) return 0;
+    do {
+        sum += dw[i];
+        i++;
+    } while (i < dw.length);
+
+    return sum;
+}
+
+
+console.log(DoWhile(dw));
+
+
+// function to find the largest of 2 numbers
+
+function largeNumber(num1, num2){
+    if (num1 > num2){
+        return num1;
+    }else{
+        return num2;
+    }
+}
+
+
+console.log(largeNumber(40,45));
+console.log(largeNumber(9,5));
+console.log(largeNumber(90, 150));
+
+
+// find the largest in 3 numbers
+
+function largeIn3(n1, n2, n3){
+    if(n1 >= n2 && n1 >=n3){
+        return n1;
+    }else if(n2 >= n1 && n2 >=n3){
+        return n2;
+    }else{
+        return n3;
+    }
+}
+
+
+console.log(largeIn3(10, 60, 140));
+console.log(largeIn3(1, 7, 2));
+console.log(largeIn3(9, 56, 23));
+
+
+
+// finding the area of a square
+
+function squareArea(side){
+    return side * side;
+}
+
+console.log('The area of the square is ' + squareArea(10));
+
+
+// finding the area of a rectangle
+
+function rectangleArea(l, w){
+    return l * w;
+}
+
+console.log("The area of the rectangle is " + rectangleArea(15, 8));
