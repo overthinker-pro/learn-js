@@ -414,3 +414,28 @@ class Person {
 
 let person1 = new Person('Alice', 30);
 console.log(person1.introduce());
+
+
+class Rectangle {
+    width;
+    height;
+
+    constructor(w, h){
+        this.width = w;
+        this.height = h;
+    }
+
+    area(){
+        return this.width * this.height;
+    }
+
+    perimeter(){
+        return 2 * (this.width + this.height);
+    }
+}
+
+
+const rect = new Rectangle(5, 10)
+console.log("Area:", rect.area());
+console.log("Perimeter:", rect.perimeter());
+
