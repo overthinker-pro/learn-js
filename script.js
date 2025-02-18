@@ -230,13 +230,13 @@
 
 // // function to find the sum of the numbers in an array using for loop
 
-const arr = [10, 11, 12, 13, 14];
+// const arr = [10, 11, 12, 13, 14];
 
-function ForLoop(arr) {
-    let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-        sum += arr[i];
-    }
+// function ForLoop(arr) {
+//     let sum = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         sum += arr[i];
+//     }
 
 //     return sum;
 // }
@@ -371,9 +371,6 @@ function ForLoop(arr) {
 // const string1 = "Hello World";
 // console.log(stringLength(string1));
 
-
-
-
 // ------- Class concept ------
 
 // class Person {
@@ -391,5 +388,33 @@ function ForLoop(arr) {
 
 // }
 
-let person1 = new Person('Alice', 30);
-console.log(person1.introduce());
+// let person1 = new Person('Alice', 30);
+// console.log(person1.introduce());
+
+let root = document.getElementById("root");
+
+// Define a set of colors
+const colors = ["#FF5733", "#33FF57", "#3357FF", "#F4C542"];
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+  .then((result) => result.json())
+  .then((posts) => {
+    for (let i = 0; i < posts.length; i++) {
+      let card = document.createElement("div");
+      let title = document.createElement("h2");
+      let content = document.createElement("p");
+
+      title.innerText = posts[i].id + " - " + posts[i].title;
+      content.innerText = posts[i].body;
+
+      // Assign a color from the array in a looping manner
+      card.style.backgroundColor = colors[i % colors.length];
+
+      card.className = "card";
+      card.append(title);
+      card.append(content);
+
+      root.append(card);
+    }
+  })
+  .catch((error) => console.log("Error:", error));
